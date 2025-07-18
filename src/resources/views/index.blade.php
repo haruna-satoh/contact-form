@@ -20,7 +20,7 @@
     </header>
 
     <main>
-        <div class="content-form__content">
+        <div class="contact-form__content">
             <div class="contact-form__heading">
                 <h2>お問い合わせ</h2>
             </div>
