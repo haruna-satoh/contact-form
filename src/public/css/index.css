@@ -21,7 +21,13 @@
     max-width: 1230px;
 }
 
-.content-form__heading {
+.contact-form__heading h2 {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.contact-form__heading {
     margin-bottom: 40px;
     text-align: center;
 }
