@@ -20,6 +20,13 @@
     padding: 30px 15px;
     max-width: 1230px;
 }
+
+.confirm__heading h2 {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+
 .confirm__heading {
     margin-bottom: 40px;
     text-align: content;
