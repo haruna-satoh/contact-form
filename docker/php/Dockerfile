@@ -1,7 +1,7 @@
-FROM php:7.4.9-fpm
+FROM php:7.4-fpm
 
-RUN sed -i 's/deb.debian.org/archive.debian.org/g' /etc/apt/sources.list
-RUN sed -i '/security.debian.org/d' /etc/apt/sources.list
+# RUN sed -i 's/deb.debian.org/archive.debian.org/g' /etc/apt/sources.list
+# RUN sed -i '/security.debian.org/d' /etc/apt/sources.list
 
 
 COPY php.ini /usr/local/etc/php/
