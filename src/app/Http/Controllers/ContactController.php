@@ -19,4 +19,10 @@ class ContactController extends Controller
         // return view('confirm', ['contact' => $contact]);
         return view('confirm', compact('contact'));
     }
+
+    public function store(Request $request)
+    {
+        // フォームから送られてきたデータの中で必要な項目を取り出し、$contactにまとめる
+        $contact = $request->only(['name', 'email', 'tel', 'content']);
+    }
 }
