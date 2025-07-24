@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+@extends('layouts.app')
+{{-- <!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -7,12 +8,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact Form</title>
     {{-- css/sanitize.cssのリンクを読み込んで使う --}}
-    <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
-    {{-- css/confirmのリンクを読み込んで使う --}}
+    {{-- <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" /> --}}
+    @section('css')
+        {{-- css/confirmのリンクを読み込んで使う --}}
     <link rel="stylesheet" href="{{ asset('css/confirm.css') }}" />
-</head>
+    @endsection
+{{-- </head> --}}
 
-<body>
+@section('content')
+{{-- <body>
     <header class="header">
         <div class="header__inner">
             <a href="/" class="header__logo">
@@ -21,7 +25,7 @@
         </div>
     </header>
 
-    <main>
+    <main> --}}
         {{-- <?php print_r($contact['name']) ?> --}}
         <div class="confirm__content">
             <div class="confirm__heading">
@@ -66,7 +70,8 @@
                 </div>
             </form>
         </div>
-    </main>
-</body>
+@endsection
+    {{-- </main> --}}
+{{-- </body> --}}
 
-</html>
+{{-- </html> --}}
