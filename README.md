@@ -12,7 +12,7 @@ contact-form
 1. このリポジトリをクローン
 ```bash
 git clone git@github.com:haruna-satoh/contact-form.git
-cd contact-form.git
+cd contact-form
 ```
 
 個人のリモートリポジトリの変更後、ローカルリポジトリから紐付け先を変更
@@ -37,6 +37,7 @@ phpコンテナにログイン
 ```bash
 docker-compose exec php bash
 ```
+
 ログイン後、以下のコマンドでインストール
 ```bash
 composer install
@@ -45,6 +46,12 @@ composer install
 4. .envファイルがなければ作成
 ```bash
 cp .env.example .env
+```
+
+Laravelアプリケーションキーを生成
+```bash
+docker-compose exec php bash
+php artisan key:generate
 ```
 
 5. アプリにアクセス
