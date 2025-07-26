@@ -2,6 +2,9 @@
 
 contact-form
 
+# 概要
+お問い合わせフォーム
+
 ## 環境
 - PHP バージョン: 7.4.33
 - Laravel バージョン: 8.83.8
@@ -15,44 +18,25 @@ git clone git@github.com:haruna-satoh/contact-form.git
 cd contact-form
 ```
 
-個人のリモートリポジトリの変更後、ローカルリポジトリから紐付け先を変更
-```bash
-git remote set-url origin 作成したリポジトリのurl
-```
-
-ローカルリポジトリのデータをリモートリポジトリに反映
-```bash
-git add .
-git commit -m "リモートリポジトリの変更"
-git push origin main
-```
-
 2. Dockerを起動
 ```bash
-docker-compose up -d --build
+docker compose up -d --build
 ```
 
-3. Composer install(未実行の場合)
-phpコンテナにログイン
+3. .envファイルがなければ作成
+```bash
+cp src/.env.example src/.env
+```
+
+4. Laravelアプリケーションのセットアップ
+phpコンテナ内で実行
 ```bash
 docker-compose exec php bash
-```
-
-ログイン後、以下のコマンドでインストール
-```bash
 composer install
-```
-
-4. .envファイルがなければ作成
-```bash
-cp .env.example .env
-```
-
-Laravelアプリケーションキーを生成
-```bash
-docker-compose exec php bash
 php artisan key:generate
+php artisan migrate
 ```
+
 
 5. アプリにアクセス
 
