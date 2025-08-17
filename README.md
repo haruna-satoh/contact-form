@@ -40,7 +40,11 @@ php artisan migrate
 
 5. アプリにアクセス
 
-・ [http://localhost](http://localhost)
+- [http://localhost](http://localhost)
     →フォームの入力ページが表示されます
-・ [http://localhost:8080/](http://localhost:8080/)
+- [http://localhost:8080/](http://localhost:8080/)
     →phpMyAdminが開きます(DB確認用)
+
+## ER図
+
+![ER図](contact.png)
